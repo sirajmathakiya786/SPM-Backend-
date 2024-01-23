@@ -7,9 +7,9 @@ const storage = multer.diskStorage({
       cb(null, 'public/uploads/profileImage');
     },
     filename: (req, file, cb) => {
-      const ext = path.extname(file.originalname);
-      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
-      cb(null, file.fieldname + '-' + uniqueSuffix + ext);
+      const ext = file.originalname;
+      //const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+      cb(null, ext);
     },
 });
   
@@ -19,7 +19,7 @@ const upload = multer({
     fileFilter: (req, file, cb) => {
         const fileTypes = /jpg|jpeg|svg|png/;
         const mimeType = fileTypes.test(file.mimetype);
-        const extname = fileTypes.test(path.extname(file.originalname));
+        const extname = fileTypes.test(file.originalname);
     
         if (mimeType && extname) {
         return cb(null, true);
@@ -29,3 +29,5 @@ const upload = multer({
     }).single("profileImage");
 
 module.exports = upload;
+
+

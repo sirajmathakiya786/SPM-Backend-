@@ -32,6 +32,7 @@
     "PRODUCT_FETCH": "Product Get",
     "PRODUCT_NOT_FOUND": "Product Not Found",
     "UPDATE_PRODUCT": "Product Updated Successfully",
-    "PRODUCT_DELETED": "Product Deleted Successfully"
+    "PRODUCT_DELETED": "Product Deleted Successfully",
+    "DASHBOARD_COUNT": "Dashboard All Count"
 }
   

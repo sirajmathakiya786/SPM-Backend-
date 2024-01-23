@@ -12,6 +12,7 @@ const userRouter = require('./src/routes/user');
 const categoryRouter = require('./src/routes/category');
 const subCategoryRouter = require('./src/routes/subcategory');
 const productRouter = require('./src/routes/product');
+const dashboardRouter = require('./src/routes/dashboard');
 
 const app = express();
 app.use(cors())
@@ -35,6 +36,7 @@ app.use('/api/users', userRouter);
 app.use('/api/category', categoryRouter);
 app.use('/api/subcategory', subCategoryRouter);
 app.use('/api/product', productRouter);
+app.use('/api/dashboard', dashboardRouter);
 
 module.exports = 
 
