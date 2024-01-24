@@ -11,13 +11,13 @@ const getSubCategory = async (req, res) => {
             const responseData = getData.map(subCategory => ({
                 _id: subCategory._id,
                 name: subCategory.name,
-                // imageUrl: process.env.BASE_URL + process.env.subCategoryImageURL + subCategory.image, 
                 imageUrl: process.env.BASE_URL + process.env.subCategoryImageURL + encodeURIComponent(subCategory.image),
                 isDeleted: subCategory.isDeleted,
-                categoryId: {
-                  _id: subCategory.categoryId._id,
-                  name: subCategory.categoryId.name
-                },
+                categoryId: subCategory.categoryId ? {
+                    _id: subCategory.categoryId._id,
+                    name: subCategory.categoryId.name
+                } : null,
+            
                 createdAt: subCategory.createdAt,
                 updatedAt: subCategory.updatedAt
               }));
@@ -28,7 +28,7 @@ const getSubCategory = async (req, res) => {
             data: responseData
         })
     } catch (error) {
-        return handleErrorResponse(req, error)
+        return handleErrorResponse(res, error)
     }
 }
 

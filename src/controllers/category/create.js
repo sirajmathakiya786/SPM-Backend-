@@ -1,6 +1,6 @@
 const { StatusCodes } = require('http-status-codes');
 const Category = require('../../models/category');
-const { handleErrorResponse } = require('../../utils/ResponseMessage.json');
+const { handleErrorResponse } = require('../../services/commonService');
 const ResponseMessage = require('../../utils/ResponseMessage.json');
 
 const create = async(req,res)=>{
