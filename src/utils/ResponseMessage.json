@@ -33,6 +33,12 @@
     "PRODUCT_NOT_FOUND": "Product Not Found",
     "UPDATE_PRODUCT": "Product Updated Successfully",
     "PRODUCT_DELETED": "Product Deleted Successfully",
-    "DASHBOARD_COUNT": "Dashboard All Count"
+    "DASHBOARD_COUNT": "Dashboard All Count",
+    "SEARCH_NOT_FOUND": "Data Not Found",
+    "SEARCH_DATA_FOUND": "Search data found",
+    "GET_CATEGORIES": "Get All Category",
+    "SUB_CATEGORY_GET": "Get All Subcategory",
+    "SUB_CATEGORY_NOT_FOUND": "SubCategory not found",
+    "DELETED_SUB_CATEGORY": "SubCategory Deleted Successfully"
 }
   

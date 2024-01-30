@@ -7,7 +7,7 @@ const listCategory = async(req,res)=>{
     try {
         const getData = await Category.find({
             isDeleted: false
-        })  
+        }).sort({createdAt: -1})
         const categoryImageURL = process.env.BASE_URL + process.env.categoryImageURL;
         const modifiedData = getData.map(category => {
         const encodedImageName = encodeURIComponent(category.image);
