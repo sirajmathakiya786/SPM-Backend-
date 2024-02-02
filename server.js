@@ -13,6 +13,7 @@ const categoryRouter = require('./src/routes/category');
 const subCategoryRouter = require('./src/routes/subcategory');
 const productRouter = require('./src/routes/product');
 const dashboardRouter = require('./src/routes/dashboard');
+const cartRouter = require('./src/routes/cart');
 
 const app = express();
 app.use(cors())
@@ -23,20 +24,12 @@ app.set('views',path.join(__dirname,'public'));
 const baseImagePath = path.join(__dirname, 'public/uploads');
 app.use('/public/uploads', express.static(baseImagePath));
 
-// const baseImagePath = path.join(__dirname, 'public/uploads');
-
-// // Serve static files based on the image type
-// app.use('/uploads/profileImage', express.static(path.join(baseImagePath, 'profileImage')));
-// app.use('/uploads/categoryImage', express.static(path.join(baseImagePath, 'categoryImage')));
-// app.use('/uploads/subCategoryImage', express.static(path.join(baseImagePath, 'subCategoryImage')));
-
-
-
 app.use('/api/users', userRouter);
 app.use('/api/category', categoryRouter);
 app.use('/api/subcategory', subCategoryRouter);
 app.use('/api/product', productRouter);
 app.use('/api/dashboard', dashboardRouter);
+app.use('/api/cart', cartRouter);
 
 module.exports = 
 
