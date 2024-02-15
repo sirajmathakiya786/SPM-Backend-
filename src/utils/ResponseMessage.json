@@ -40,6 +40,7 @@
     "SUB_CATEGORY_GET": "Get All Subcategory",
     "SUB_CATEGORY_NOT_FOUND": "SubCategory not found",
     "DELETED_SUB_CATEGORY": "SubCategory Deleted Successfully",
-    "NEW_CART": "New Cart Added Successfully"
+    "NEW_CART": "New Cart Added Successfully",
+    "PRODUCT_LIKE": "Product liked"
 }
   
